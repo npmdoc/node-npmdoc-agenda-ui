@@ -1,0 +1,502 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/moudy/agenda-ui"
+
+    >agenda-ui (v0.0.7)</a>
+</h1>
+<h4>UI for Agenda</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.agenda-ui">module agenda-ui</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>store
+            <span class="apidocSignatureSpan">(agenda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">agenda-ui.</span>store.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.agenda-ui.store">module agenda-ui.store</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.store">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>store
+            <span class="apidocSignatureSpan">(agenda)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.agenda-ui.store.prototype">module agenda-ui.store.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.buildQuery">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>buildQuery
+            <span class="apidocSignatureSpan">(queryParams)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.count">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>count
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.data">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>data
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.definitionObjects">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>definitionObjects
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.definitions">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>definitions
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.jobs">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>jobs
+            <span class="apidocSignatureSpan">(query)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store.prototype.meta">
+            function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>meta
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.agenda-ui" id="apidoc.module.agenda-ui">module agenda-ui</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store" id="apidoc.element.agenda-ui.store">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>store
+        <span class="apidocSignatureSpan">(agenda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">store = function (agenda) {
+  this.agenda = agenda;
+  this.db = agenda._db;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.agenda-ui.store" id="apidoc.module.agenda-ui.store">module agenda-ui.store</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.store" id="apidoc.element.agenda-ui.store.store">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>store
+        <span class="apidocSignatureSpan">(agenda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">store = function (agenda) {
+  this.agenda = agenda;
+  this.db = agenda._db;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.agenda-ui.store.prototype" id="apidoc.module.agenda-ui.store.prototype">module agenda-ui.store.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.buildQuery" id="apidoc.element.agenda-ui.store.prototype.buildQuery">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>buildQuery
+        <span class="apidocSignatureSpan">(queryParams)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildQuery = function (queryParams) {
+  queryParams || (queryParams = {});
+  var query = {};
+  var filter = queryParams.filter;
+  var name = queryParams.name;
+
+  if (!filter || &#x27;future&#x27; === filter) {
+    query.nextRunAt =  { $gte: new Date() };
+  } else if (&#x27;completed&#x27; === filter) {
+    query.lastFinishedAt =  { $exists: true };
+    query.type = &#x27;normal&#x27;;
+  } else if (&#x27;failed&#x27; === filter) {
+    query.failedAt =  { $exists: true };
+  }
+
+  if (name &#x26;&#x26; &#x27;All&#x27; !== name) {
+    query.name = name;
+  }
+
+  return query;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  jobs: this.jobs(query)
+, meta: this.meta()
+, definitions: this.definitions(query)
+});
+};
+
+Store.prototype.jobs = function (query) {
+query = this.<span class="apidocCodeKeywordSpan">buildQuery</span>(query);
+var jobs = RSVP.denodeify(this.agenda.jobs.bind(this.agenda));
+return jobs(query).then(function (results) {
+  return results.map(function (result) {
+    result.attrs.jobData = result.attrs.data;
+    delete result.attrs.data;
+    return result;
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.count" id="apidoc.element.agenda-ui.store.prototype.count">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>count
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">count = function (options) {
+  var count = RSVP.denodeify(this.db.count.bind(this.db));
+  return count(this.buildQuery(options));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return result;
+    });
+  });
+};
+
+Store.prototype.meta = function () {
+  var hash = {
+    total: this.<span class="apidocCodeKeywordSpan">count</span>()
+  , completed: this.count({filter: &#x27;completed&#x27;})
+  , future: this.count({filter: &#x27;future&#x27;})
+  , failed: this.count({filter: &#x27;failed&#x27;})
+  };
+
+  return RSVP.hash(hash);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.data" id="apidoc.element.agenda-ui.store.prototype.data">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>data
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">data = function (query) {
+  return RSVP.hash({
+    jobs: this.jobs(query)
+  , meta: this.meta()
+  , definitions: this.definitions(query)
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Store = require(&#x27;./store&#x27;);
+
+module.exports = function (agenda) {
+var router = express.Router();
+var store = new Store(agenda);
+
+router.get(&#x27;/jobs&#x27;, function (req, res) {
+  store.<span class="apidocCodeKeywordSpan">data</span>(req.query).then(res.json.bind(res));
+});
+
+router.get(&#x27;/definitions&#x27;, function (req, res) {
+  store.definitions().then(function (definitions) {
+    res.json({ definitions: definitions });
+  });
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.definitionObjects" id="apidoc.element.agenda-ui.store.prototype.definitionObjects">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>definitionObjects
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">definitionObjects = function () {
+  var objects = Object.keys(this.agenda._definitions).map(function (d) {
+    var id = slug(d);
+    return {
+      _id: id
+    , name: d
+    , sortValue: 0
+    };
+  });
+
+  objects.push({
+    _id: &#x27;all&#x27;
+  , name: &#x27;All&#x27;
+  , sortValue: -1
+  });
+
+  return objects;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return query;
+};
+
+Store.prototype.definitions = function (query) {
+query || (query = {});
+var hash = { all: this.count({filter: query.filter}) };
+var indexMap = {};
+var objects = this.<span class="apidocCodeKeywordSpan">definitionObjects</span>();
+
+objects.forEach(function (definition) {
+  indexMap[definition._id] = objects.indexOf(definition);
+  hash[definition._id] = this.count({name: definition.name, filter: query.filter});
+}, this);
+
+return RSVP.hash(hash).then(function (counts) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.definitions" id="apidoc.element.agenda-ui.store.prototype.definitions">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>definitions
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">definitions = function (query) {
+  query || (query = {});
+  var hash = { all: this.count({filter: query.filter}) };
+  var indexMap = {};
+  var objects = this.definitionObjects();
+
+  objects.forEach(function (definition) {
+    indexMap[definition._id] = objects.indexOf(definition);
+    hash[definition._id] = this.count({name: definition.name, filter: query.filter});
+  }, this);
+
+  return RSVP.hash(hash).then(function (counts) {
+    return Object.keys(counts).map(function (id) {
+      var object = objects[indexMap[id]];
+      object.count = counts[id];
+      return object;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var store = new Store(agenda);
+
+  router.get(&#x27;/jobs&#x27;, function (req, res) {
+    store.data(req.query).then(res.json.bind(res));
+  });
+
+  router.get(&#x27;/definitions&#x27;, function (req, res) {
+    store.<span class="apidocCodeKeywordSpan">definitions</span>().then(function (definitions) {
+      res.json({ definitions: definitions });
+    });
+  });
+
+  return router;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.jobs" id="apidoc.element.agenda-ui.store.prototype.jobs">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>jobs
+        <span class="apidocSignatureSpan">(query)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">jobs = function (query) {
+  query = this.buildQuery(query);
+  var jobs = RSVP.denodeify(this.agenda.jobs.bind(this.agenda));
+  return jobs(query).then(function (results) {
+    return results.map(function (result) {
+      result.attrs.jobData = result.attrs.data;
+      delete result.attrs.data;
+      return result;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Store = module.exports = function (agenda) {
+this.agenda = agenda;
+this.db = agenda._db;
+};
+
+Store.prototype.data = function (query) {
+return RSVP.hash({
+  jobs: this.<span class="apidocCodeKeywordSpan">jobs</span>(query)
+, meta: this.meta()
+, definitions: this.definitions(query)
+});
+};
+
+Store.prototype.jobs = function (query) {
+query = this.buildQuery(query);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.store.prototype.meta" id="apidoc.element.agenda-ui.store.prototype.meta">
+        function <span class="apidocSignatureSpan">agenda-ui.store.prototype.</span>meta
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">meta = function () {
+  var hash = {
+    total: this.count()
+  , completed: this.count({filter: &#x27;completed&#x27;})
+  , future: this.count({filter: &#x27;future&#x27;})
+  , failed: this.count({filter: &#x27;failed&#x27;})
+  };
+
+  return RSVP.hash(hash);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.agenda = agenda;
+this.db = agenda._db;
+};
+
+Store.prototype.data = function (query) {
+return RSVP.hash({
+  jobs: this.jobs(query)
+, meta: this.<span class="apidocCodeKeywordSpan">meta</span>()
+, definitions: this.definitions(query)
+});
+};
+
+Store.prototype.jobs = function (query) {
+query = this.buildQuery(query);
+var jobs = RSVP.denodeify(this.agenda.jobs.bind(this.agenda));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
