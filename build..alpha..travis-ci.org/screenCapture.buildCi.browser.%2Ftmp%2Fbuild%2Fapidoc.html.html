@@ -56,6 +56,24 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.agenda-ui">
+            function <span class="apidocSignatureSpan"></span>agenda-ui
+            <span class="apidocSignatureSpan">(agenda, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.api">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>api
+            <span class="apidocSignatureSpan">(agenda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.store">
             function <span class="apidocSignatureSpan">agenda-ui.</span>store
             <span class="apidocSignatureSpan">(agenda)</span>
@@ -65,7 +83,29 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.toString">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">agenda-ui.</span>store.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.agenda-ui.api">module agenda-ui.api</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.api.api">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>api
+            <span class="apidocSignatureSpan">(agenda)</span>
+            </a>
 
         </li>
 
@@ -151,10 +191,101 @@
 
     </ol></li>
 
+    <li class="apidocModuleLi"><a href="#apidoc.module.agenda-ui.toString">module agenda-ui.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.agenda-ui.toString.toString">
+            function <span class="apidocSignatureSpan">agenda-ui.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.agenda-ui" id="apidoc.module.agenda-ui">module agenda-ui</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.agenda-ui" id="apidoc.element.agenda-ui.agenda-ui">
+        function <span class="apidocSignatureSpan"></span>agenda-ui
+        <span class="apidocSignatureSpan">(agenda, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">agenda-ui = function (agenda, options) {
+  options || (options = {});
+  if (typeof options.poll === 'undefined') {
+    options.POLL_INTERVAL = 1000;
+  } else {
+    options.POLL_INTERVAL = options.poll;
+  }
+
+  var app = express();
+  var indexHTML = path.join(__dirname, 'lib', 'index.html');
+
+  var router = express.Router();
+
+  router.get('/:definitionId?', function (req, res) {
+    var data = {};
+
+    options.NAMESPACE = req.originalUrl.replace(/(^\/|\/$)/g, '');
+
+    if(options.ASSET_HOST) {
+      options.ASSETS_NAMESPACE = options.ASSET_HOST + '/' + options.NAMESPACE;
+    } else {
+      options.ASSETS_NAMESPACE = '/' + options.NAMESPACE;
+    }
+
+    data.options = options;
+
+    ejs.renderFile(indexHTML, data, function (err, html) {
+      res.send(html);
+    });
+  });
+
+  app.use('/assets', express.static(path.join(__dirname, 'assets')));
+  app.use(api(agenda));
+  app.use(router);
+
+  return app;
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.api" id="apidoc.element.agenda-ui.api">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>api
+        <span class="apidocSignatureSpan">(agenda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">api = function (agenda) {
+  var router = express.Router();
+  var store = new Store(agenda);
+
+  router.get('/jobs', function (req, res) {
+    store.data(req.query).then(res.json.bind(res));
+  });
+
+  router.get('/definitions', function (req, res) {
+    store.definitions().then(function (definitions) {
+      res.json({ definitions: definitions });
+    });
+  });
+
+  return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
@@ -172,6 +303,54 @@
     </ul>
 
 
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.toString" id="apidoc.element.agenda-ui.toString">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.agenda-ui.api" id="apidoc.module.agenda-ui.api">module agenda-ui.api</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.api.api" id="apidoc.element.agenda-ui.api.api">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>api
+        <span class="apidocSignatureSpan">(agenda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">api = function (agenda) {
+  var router = express.Router();
+  var store = new Store(agenda);
+
+  router.get('/jobs', function (req, res) {
+    store.data(req.query).then(res.json.bind(res));
+  });
+
+  router.get('/definitions', function (req, res) {
+    store.definitions().then(function (definitions) {
+      res.json({ definitions: definitions });
+    });
+  });
+
+  return router;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
 
 
 </div>
@@ -482,6 +661,24 @@ Store.prototype.jobs = function (query) {
 query = this.buildQuery(query);
 var jobs = RSVP.denodeify(this.agenda.jobs.bind(this.agenda));
 ...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.agenda-ui.toString" id="apidoc.module.agenda-ui.toString">module agenda-ui.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.agenda-ui.toString.toString" id="apidoc.element.agenda-ui.toString.toString">
+        function <span class="apidocSignatureSpan">agenda-ui.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
