@@ -1,4 +1,7 @@
-# api documentation for  [agenda-ui (v0.0.7)](https://github.com/moudy/agenda-ui)  [![npm package](https://img.shields.io/npm/v/npmdoc-agenda-ui.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-agenda-ui) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-agenda-ui.svg)](https://travis-ci.org/npmdoc/node-npmdoc-agenda-ui)
+# npmdoc-agenda-ui
+
+#### basic api documentation for  [agenda-ui (v0.0.7)](https://github.com/moudy/agenda-ui)  [![npm package](https://img.shields.io/npm/v/npmdoc-agenda-ui.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-agenda-ui) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-agenda-ui.svg)](https://travis-ci.org/npmdoc/node-npmdoc-agenda-ui)
+
 #### UI for Agenda
 
 [![NPM](https://nodei.co/npm/agenda-ui.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/agenda-ui)
@@ -81,7 +84,8 @@
         "prepublish": "./scripts/build",
         "test": "mocha"
     },
-    "version": "0.0.7"
+    "version": "0.0.7",
+    "bin": {}
 }
 ```
 
